@@ -43,6 +43,3 @@ def preprocess_text(text):
     #print(text_data.head(5))
 
     text_data.to_csv('data/processed_data.csv', index=False)
-
-if __name__ == '__main__':
-    preprocess_text('data/all-data.csv')
