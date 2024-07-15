@@ -37,5 +37,4 @@ def preprocess_text(text):
 
     text_data.to_csv('data/processed_data.csv', index=False)
 
-if __name__ == '__main__':
-    preprocess_text('data/all-data.csv')
+    return lemmatized_article
