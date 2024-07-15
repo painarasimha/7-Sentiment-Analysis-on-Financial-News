@@ -2,7 +2,10 @@
 import pandas as pd
 from nltk.tokenize import word_tokenize, sent_tokenize
 from nltk.stem import WordNetLemmatizer
+from nltk.corpus import stopwords
 import joblib
+import nltk
+nltk.download('stopwords')
 
 # Preprocess text
 def preprocess_text(text):
@@ -24,9 +27,13 @@ def preprocess_text(text):
         #print(words)
         #print(sentences)
 
-        # Lemmatization
+        # Defining Stopset with stopwords in it
+
+        stopset = set(stopwords.words('english'))
+
+        # Removing Stop Words and Lemmatization
         lemmatizer = WordNetLemmatizer()
-        root_word = [lemmatizer.lemmatize(word) for word in words]
+        root_word = [lemmatizer.lemmatize(word) for word in words if word not in stopset]
 
         # Joining the words back to sentences
         lemmatized_text = ' '.join(root_word)
