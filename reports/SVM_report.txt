@@ -1,0 +1,11 @@
+Classification Report for svm:
+              precision    recall  f1-score   support
+
+    negative       0.80      0.37      0.51       110
+     neutral       0.70      0.98      0.81       571
+    positive       0.80      0.34      0.48       289
+
+    accuracy                           0.72       970
+   macro avg       0.77      0.56      0.60       970
+weighted avg       0.74      0.72      0.68       970
+============================================================
